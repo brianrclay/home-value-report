@@ -4,21 +4,63 @@ $(document).ready(function () {
         slidesToShow: 3,
         prevArrow: $('.sold.arrows .prev'),
         nextArrow: $('.sold.arrows .next'),
-        infinite: false
+        infinite: false,
+        responsive:[
+            {
+                breakpoint: 1050,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     $('.comps-slider.pending').slick({
         slidesToShow: 3,
         prevArrow: $('.pending.arrows .prev'),
         nextArrow: $('.pending.arrows .next'),
-        infinite: false
+        infinite: false,
+        responsive:[
+            {
+                breakpoint: 1050,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
     
     $('.comps-slider.active').slick({
         slidesToShow: 3,
         prevArrow: $('.active.arrows .prev'),
         nextArrow: $('.active.arrows .next'),
-        infinite: false
+        infinite: false,
+        responsive:[
+            {
+                breakpoint: 1050,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     // Remove/Add Comparable
@@ -35,7 +77,48 @@ $(document).ready(function () {
             '<span class="m-l-5">Add to comparables</span>')
             $(this).parents('.listing').addClass('removed')
         }
-    })
+    });
+
+    // show/hide get alerts
+
+    var triggerTop = $('.get-alerts-trigger').offset().top;
+    var triggerLeft = $('.get-alerts-trigger').offset().left;
+    var triggerHeight = $('.get-alerts-trigger').height();
+    $('.get-alerts').css({
+        'top': triggerTop + triggerHeight + 5 + 'px',
+        'left': triggerLeft + 'px',
+    });
+
+    $('body').on('click', '.get-alerts-trigger', function(){     
+        if($('.get-alerts').hasClass('open')){
+            $('.get-alerts').removeClass('open');
+        }else{
+            $('.get-alerts').addClass('open');
+        }
+    });
+
+    $('body').on('click', function(e){
+        if($('.popup.open').length){
+            if($(e.target).hasClass('popup-trigger') == false){
+                if($(e.target).parents('.popup').length == 0 && !$(e.target).hasClass('popup')){
+                    $('.get-alerts, .get-alerts-bottom').removeClass('open');
+                }
+            }
+        }
+    });
+
+    //Scroll Popup
+
+    var seen = false;
+    $(window).scroll(function(){
+        var wTop = $(window).scrollTop();
+        var compTop = $('.hv-bottom').offset().top;
+        if(wTop >= compTop - 300 && !seen){
+            $('.get-alerts-bottom').addClass('open');
+            seen = true;
+        }
+    });
+    
 
     // HV Chart
 
@@ -101,7 +184,7 @@ $(document).ready(function () {
         data: {
             labels: ["Jun", "Jul", "Sep", "Oct", "Nov", "Dec",],
             datasets: [{
-                label: 'Your Home',
+                label: 'Your Current Value',
                 backgroundColor: "transparent",
                 borderColor: "#179EFF",
                 borderDash: [10, 5],
@@ -124,4 +207,4 @@ $(document).ready(function () {
         },
         options: hvChartOptions
     });
-})
+});
