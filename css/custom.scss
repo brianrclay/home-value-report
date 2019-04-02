@@ -574,6 +574,21 @@ $easing: cubic-bezier(.475,.425,0,.995);
     }
 }
 
+.mobile-cta{
+    width: 100%;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    cursor: pointer;
+    font-weight: bold;
+    display:  none;
+    transition: $transition;
+}
+
 .get-alerts-bottom{
     top: unset;
     left: unset;
@@ -848,7 +863,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
     }
 
     .agent-info-block{
-        
+
         .agent-contact-info{
             padding: 20px 20px 10px;
         }
@@ -865,5 +880,9 @@ $easing: cubic-bezier(.475,.425,0,.995);
 
     .get-alerts-bottom, .get-alerts{
         display: none;
+    }
+
+    .mobile-cta{
+        display: flex;
     }
 }
