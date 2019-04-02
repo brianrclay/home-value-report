@@ -883,7 +883,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
     }
 
     .get-alerts{
-        max-width: 300px;
+        max-width: unset;
 
         svg{
             display: none;

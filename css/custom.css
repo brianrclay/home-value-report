@@ -641,7 +641,7 @@
     display: none; }
 
   .get-alerts {
-    max-width: 300px; }
+    max-width: unset; }
     .get-alerts svg {
       display: none; }
 
