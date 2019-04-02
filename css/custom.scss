@@ -85,7 +85,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
     top: 0;
 
     .estimate{
-        span{
+        .sub-headline{
             font-size: 16px;
             margin-bottom: 20px;
             display: block;
@@ -528,7 +528,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
     top: 0;
     transition: all 300ms ease;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.11), 0px 15px 5px rgba(0, 0, 0, 0.0008);
-    background: #fff;
+    background: #f3f3f3;
     padding: 20px;
     z-index: 5;
     opacity: 0;
@@ -673,7 +673,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
         padding: 20px;
 
         .estimate{
-            span{
+            .sub-headline{
                 font-size: 14px;
             }
 
@@ -785,7 +785,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
         }
 
         .estimate{
-            span{
+            .sub-headline{
                 font-size: 14px;
                 text-align: center;
             }
@@ -878,8 +878,16 @@ $easing: cubic-bezier(.475,.425,0,.995);
         border-bottom: 1px solid $grey-2;
     }
 
-    .get-alerts-bottom, .get-alerts{
+    .get-alerts-bottom{
         display: none;
+    }
+
+    .get-alerts{
+        max-width: 300px;
+
+        svg{
+            display: none;
+        }
     }
 
     .mobile-cta{

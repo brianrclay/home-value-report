@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     //slick slider
     $('.comps-slider.sold').slick({
         slidesToShow: 3,
