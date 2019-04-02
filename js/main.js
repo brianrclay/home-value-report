@@ -126,16 +126,15 @@ $(document).ready(function () {
     var ctaHeight = $('.cta-bar').innerHeight();
     var ctaTop = $('.cta-bar').offset().top;
 
-    $('.cta-bar').css({
-        'top': propDetailsHeight + 'px',
-        // 'box-shadow': '0px -3px 6px rgba(0, 0, 0, 0.11);'
-    });
-
-    $('.hv-top .col:last-child').css({
-        'margin-top': propDetailsHeight + ctaHeight + 'px'
-    });
-
     if(wWidth <= 630){
+        $('.cta-bar').css({
+            'top': propDetailsHeight + 'px',
+            // 'box-shadow': '0px -3px 6px rgba(0, 0, 0, 0.11);'
+        });
+    
+        $('.hv-top .col:last-child').css({
+            'margin-top': propDetailsHeight + ctaHeight + 'px'
+        });
         $(window).scroll(function(){
             var wTop = $(window).scrollTop();
                 if(wTop >= ctaTop){
