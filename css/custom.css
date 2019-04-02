@@ -545,7 +545,7 @@
   .cta-bar {
     padding: 30px 20px;
     position: absolute;
-    top: 324px;
+    top: 315px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -581,7 +581,7 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin-top: 426px;
+      margin-top: 417px;
       border-left: none; }
     .hv-top .prop-details {
       position: absolute;
@@ -591,7 +591,8 @@
       .hv-top .prop-details .map-wrapper {
         height: 165px; }
       .hv-top .prop-details .details-wrapper h4 {
-        font-size: 20px; }
+        font-size: 20px;
+        margin-top: 0; }
       .hv-top .prop-details .left-actions .action:first-child {
         position: absolute;
         right: 0;
@@ -607,6 +608,12 @@
     margin-left: 10px; }
   .chart-block .chart-wrapper {
     padding-bottom: 20px; }
+
+  .agent-info-block .agent-contact-info {
+    padding: 20px 20px 10px; }
+  .agent-info-block .agent-tagline {
+    padding: 0 20px 0;
+    height: unset; }
 
   .comp-table-block table tbody {
     border-bottom: 1px solid #d8d8d8; }

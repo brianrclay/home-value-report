@@ -759,7 +759,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
     .cta-bar{
         padding: 30px 20px;
         position: absolute;
-        top: 324px;
+        top: 315px;
         flex-direction: column;
         width: 100%;
         box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.11);
@@ -797,7 +797,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
             width: 100%;
             flex-direction: column-reverse;
             display: flex;
-            margin-top: 426px;
+            margin-top: 417px;
             border-left: none;
         }
 
@@ -813,6 +813,7 @@ $easing: cubic-bezier(.475,.425,0,.995);
 
             .details-wrapper h4{
                 font-size: 20px;
+                margin-top: 0;
             }
     
             .left-actions{
@@ -845,6 +846,18 @@ $easing: cubic-bezier(.475,.425,0,.995);
             padding-bottom: 20px;
         }
     }
+
+    .agent-info-block{
+        
+        .agent-contact-info{
+            padding: 20px 20px 10px;
+        }
+
+        .agent-tagline{
+            padding: 0 20px 0;
+            height: unset;
+        }
+    } 
 
     .comp-table-block table tbody{
         border-bottom: 1px solid $grey-2;

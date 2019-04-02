@@ -118,6 +118,41 @@ $(document).ready(function () {
             seen = true;
         }
     });
+
+    // Mobile Sticky CTA
+
+    var wWidth = $(window).width();
+    var propDetailsHeight = $('.prop-details').innerHeight();
+    var ctaHeight = $('.cta-bar').innerHeight();
+    var ctaTop = $('.cta-bar').offset().top;
+
+    $('.cta-bar').css({
+        'top': propDetailsHeight + 'px',
+        // 'box-shadow': '0px -3px 6px rgba(0, 0, 0, 0.11);'
+    });
+
+    $('.hv-top .col:last-child').css({
+        'margin-top': propDetailsHeight + ctaHeight + 'px'
+    });
+
+    if(wWidth <= 630){
+        $(window).scroll(function(){
+            var wTop = $(window).scrollTop();
+                if(wTop >= ctaTop){
+                    $('.cta-bar').css({
+                        'position': 'fixed',
+                        'top': '0',
+                        'box-shadow': '0px 2px 6px rgba(0, 0, 0, 0.11)'
+                    });
+                } else{
+                    $('.cta-bar').css({
+                        'position': 'absolute',
+                        'top': propDetailsHeight + 'px',
+                        'box-shadow': '0px -3px 6px rgba(0, 0, 0, 0.11)'
+                    });
+                }
+        })
+    }
     
 
     // HV Chart
